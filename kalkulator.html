@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+    <h2>Kalkulator</h2>
+    <p>Bilangan 1 <input type="number" id="nilai1" placeholder="Masukkan nilai Pertama"></p>
+    <p>Bilangan 2 <input type="number" id="nilai2" placeholder="Masukkan nilai Kedua"></p>
+    
+    <button onclick="perkalian()">Perkalian</button>
+    <button onclick="pembagian()">Pembagian</button>
+    <button onclick="pertambahan()">Pertambahan</button>
+    <button onclick="pengurangan()">Pengurangan</button>
+
+    <h2 id="hasil"></h2>
+
+    <script>
+        function perkalian(){
+            let nilai1 = document.getElementById("nilai1").value
+            let nilai2 = document.getElementById("nilai2").value
+
+            let hasil = parseInt(nilai1) * parseInt(nilai2)
+
+            document.getElementById("hasil").innerHTML = hasil
+        }
+
+        function pembagian(){
+            let nilai1 = document.getElementById("nilai1").value
+            let nilai2 = document.getElementById("nilai2").value
+
+            let hasil = parseInt(nilai1) / parseInt(nilai2)
+
+            document.getElementById("hasil").innerHTML = hasil
+        }
+
+        function pertambahan(){
+            let nilai1 = document.getElementById("nilai1").value
+            let nilai2 = document.getElementById("nilai2").value
+
+            let hasil = parseInt(nilai1) + parseInt(nilai2)
+
+            document.getElementById("hasil").innerHTML = hasil
+        }
+
+        function pengurangan(){
+            let nilai1 = document.getElementById("nilai1").value
+            let nilai2 = document.getElementById("nilai2").value
+
+            let hasil = parseInt(nilai1) - parseInt(nilai2)
+
+            document.getElementById("hasil").innerHTML = hasil
+        }
+    </script>
+</body>
+</html>
